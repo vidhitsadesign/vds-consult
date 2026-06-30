@@ -101,6 +101,14 @@ nav {
   opacity: 0.3;
   top: 100px;
 }
+@media (max-width: 768px) {
+  .hero-rule-top {
+    position: static;
+    left: 0; right: 0;
+    width: calc(100% - 48px);
+    margin: 0 24px 18px;
+  }
+}
 
 .hero-content { position: relative; z-index: 2; max-width: 780px; }
 
@@ -1005,12 +1013,21 @@ footer img { height: 28px; object-fit: contain; opacity: 0.6; }
   /* Nav */
   .nav { padding: 0 20px; }
   .nav-links { gap: 16px; }
-  .nav-links { gap: 10px; }
-  .nav-links a:not(.bt-nav) { display: none; }
-  .nav-secondary-link { display: none !important; }
-  .nav-links-wrap { gap: 12px !important; }
-  nav { padding: 14px 16px !important; }
+  nav {
+    flex-wrap: wrap !important;
+    padding: 14px 16px 10px !important;
+    row-gap: 10px;
+  }
   .nav-logo img { max-height: 26px; }
+  .nav-links-wrap {
+    width: 100%;
+    justify-content: center !important;
+    gap: 20px !important;
+    order: 3;
+    flex-wrap: wrap;
+  }
+  .nav-secondary-link { font-size: 0.5rem !important; letter-spacing: 0.2em !important; }
+  .nav-cta { font-size: 0.55rem !important; padding: 10px 16px !important; }
   .bt-nav { font-size: 0.52rem; padding: 10px 16px; }
 
   /* Intro strip */
