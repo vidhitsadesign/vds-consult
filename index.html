@@ -210,6 +210,7 @@ nav {
   bottom: 80px;
   text-align: right;
   z-index: 2;
+  pointer-events: none;
 }
 .hero-fee-label {
   font-family: "Montserrat", sans-serif;
@@ -1005,6 +1006,10 @@ footer img { height: 28px; object-fit: contain; opacity: 0.6; }
   color: rgba(245,239,230,0.4);
   letter-spacing: 0.03em;
   border-left: 2px solid var(--gold);
+}
+
+@media (max-width: 1300px) and (min-width: 769px) {
+  .hero-fee { position: static !important; margin-top: 28px; right: auto; text-align: left; }
 }
 
 @media (max-width: 768px) {
